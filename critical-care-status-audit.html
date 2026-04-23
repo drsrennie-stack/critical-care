@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MedMasters Critical Care | Status Audit</title>
+<title>STAT Success Cohort | Status Audit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -746,8 +746,8 @@ body {
   <!-- WEEK PICKER: shown if no ?week= param -->
   <div id="weekPicker" style="display: none;">
     <header style="margin-bottom: var(--cc-space-6);">
-      <div class="eyebrow">MedMasters Critical Care</div>
-      <h1 style="font-size: var(--cc-size-3xl); font-weight: var(--cc-weight-extra); color: var(--cc-navy); line-height: var(--cc-leading-tight); letter-spacing: -0.02em; margin-bottom: var(--cc-space-4);">Status Audit</h1>
+      <div class="eyebrow">STAT Success Cohort</div>
+      <h1 style="font-size: var(--cc-size-3xl); font-weight: var(--cc-weight-extra); color: var(--cc-navy); line-height: var(--cc-leading-tight); letter-spacing: -0.02em; margin-bottom: var(--cc-space-4);">Current State Audit</h1>
       <p style="font-size: var(--cc-size-md); color: var(--cc-text-secondary); line-height: var(--cc-leading-relaxed); max-width: 62ch;">
         Your weekly self-assessment. Written as a SOAP note on yourself. Which week's
         audit are you working on?
@@ -765,8 +765,8 @@ body {
   <!-- MAIN AUDIT FORM -->
   <div id="auditForm" style="display: none;">
     <header class="masthead">
-      <div class="eyebrow" id="weekLabel">Status Audit</div>
-      <h1 id="weekTitle">Your Status</h1>
+      <div class="eyebrow" id="weekLabel">STAT Success Cohort · Current State Audit</div>
+      <h1 id="weekTitle">Your Current State</h1>
       <div class="masthead__theme" id="weekTheme"></div>
       <p class="masthead__lead" id="weekIntro"></p>
     </header>
@@ -778,8 +778,8 @@ body {
     <div id="soapReveal" style="display: none;" class="soap-reveal">
       <div class="soap-reveal__title">Starting this week: SOAP</div>
       <p class="soap-reveal__text">
-        You may have noticed the Status audit follows a consistent structure. It's called a
-        SOAP note — the same framework clinicians use to document patient visits. Subjective,
+        You may have noticed the Current state audit follows a consistent structure. It is called a
+        SOAP note, the same framework clinicians use to document patient visits. Subjective,
         Objective, Assessment, Plan. You've been writing SOAP notes on yourself for two weeks
         already. Now it has a name.
       </p>
@@ -1010,11 +1010,11 @@ body {
   <!-- CONFIRMATION -->
   <div id="confirmation" class="confirmation">
     <div class="confirmation__hero">
-      <div class="confirmation__eyebrow">Status submitted</div>
+      <div class="confirmation__eyebrow">Current state submitted</div>
       <h2 class="confirmation__title">Thank you.</h2>
       <p class="confirmation__body" id="confirmBody">
         Your audit is saved. Your facilitator will review it before today's session. Bring
-        what came up here into the Triage discussion.
+        what came up here into the team discussion.
       </p>
     </div>
 
@@ -1022,8 +1022,8 @@ body {
       <div class="callout__body">
         <p class="callout__title">What happens next</p>
         <p class="callout__text">
-          Show up to your live session ready to work the case. After Triage, you'll write
-          your Action plan for the week ahead. Next week's Status will ask whether you did
+          Show up to your live session ready to work the case. After the session, you will write
+          your decision plan for the week ahead. Next week's Current state audit will ask whether you did
           what you said you would.
         </p>
       </div>
@@ -1053,9 +1053,9 @@ body {
 const WEEKS = {
   2: {
     theme: 'Stop the bleeding',
-    eyebrow: 'Week 2 Status',
-    title: 'Your Status for Week 2',
-    intro: 'This is your first full Status. Take about 15 minutes. The rest of the program runs on this rhythm, so getting it right now makes everything that follows easier.',
+    eyebrow: 'Week 2 Current State',
+    title: 'Your Current State for Week 2',
+    intro: 'This is your first full Current State audit. Take about 15 minutes. The rest of the program runs on this rhythm, so getting it right now makes everything that follows easier.',
     aIntro: 'Coming off the Week 1 session, what do you make of what you\'re doing and how it\'s working?',
     aQuestions: [
       { id: 'a_methods_working', label: 'Are the study methods you\'re using actually producing learning?', type: 'radio', options: [
@@ -1071,8 +1071,8 @@ const WEEKS = {
   },
   3: {
     theme: 'Foundation repair, selective',
-    eyebrow: 'Week 3 Status',
-    title: 'Your Status for Week 3',
+    eyebrow: 'Week 3 Current State',
+    title: 'Your Current State for Week 3',
     intro: 'This week we\'re looking at what earlier content is still with you and what isn\'t. Not to panic you, but to find what\'s load-bearing.',
     aIntro: 'The current material in A&P depends on things you were supposed to learn earlier. Which of those are still solid, and which are shaky?',
     aQuestions: [
@@ -1091,8 +1091,8 @@ const WEEKS = {
   },
   4: {
     theme: 'The midterm hinge',
-    eyebrow: 'Week 4 Status',
-    title: 'Your Status for Week 4',
+    eyebrow: 'Week 4 Current State',
+    title: 'Your Current State for Week 4',
     intro: 'We\'re at the hinge point. This is where recovery either takes hold or slips. Your audit this week is about exam strategy as much as content.',
     aIntro: 'Look at your most recent major assessment. What can you learn from how it went?',
     aQuestions: [
@@ -1108,8 +1108,8 @@ const WEEKS = {
   },
   5: {
     theme: 'Point recovery',
-    eyebrow: 'Week 5 Status',
-    title: 'Your Status for Week 5',
+    eyebrow: 'Week 5 Current State',
+    title: 'Your Current State for Week 5',
     intro: 'This week is about the points already in your course that might still be recoverable. Extra credit, resubmissions, participation, anything in your syllabus you haven\'t fully claimed.',
     aIntro: 'Go to your syllabus. Look at every gradable thing. What\'s recoverable that you haven\'t pursued?',
     aQuestions: [
@@ -1137,8 +1137,8 @@ const WEEKS = {
   },
   6: {
     theme: 'Consolidation and integration',
-    eyebrow: 'Week 6 Status',
-    title: 'Your Status for Week 6',
+    eyebrow: 'Week 6 Current State',
+    title: 'Your Current State for Week 6',
     intro: 'The work shifts this week from fixing what\'s broken to connecting what you have. Cross-system thinking is where A&P gets harder, and also where it pays off.',
     aIntro: 'How well are you connecting concepts across body systems right now?',
     aQuestions: [
@@ -1156,8 +1156,8 @@ const WEEKS = {
   },
   7: {
     theme: 'Final exam runway',
-    eyebrow: 'Week 7 Status',
-    title: 'Your Status for Week 7',
+    eyebrow: 'Week 7 Current State',
+    title: 'Your Current State for Week 7',
     intro: 'Final exam preparation week. What\'s still to learn, what\'s still to review, what\'s the plan for the next 7 to 10 days.',
     aIntro: 'How well prepared are you for your final exam, honestly?',
     aQuestions: [
@@ -1176,14 +1176,14 @@ const WEEKS = {
   },
   8: {
     theme: 'Definitive care',
-    eyebrow: 'Week 8 Status',
-    title: 'Your Status for Week 8',
-    intro: 'The final Status. Your final is either done or imminent. This week we\'re looking at what you learned, what you\'ll keep, and what comes next.',
+    eyebrow: 'Week 8 Current State',
+    title: 'Your Current State for Week 8',
+    intro: 'The final Current State audit. Your final is either done or imminent. This week we are looking at what you learned, what you will keep, and what comes next.',
     aIntro: 'Looking back across the 8 weeks, what changed?',
     aQuestions: [
       { id: 'a_final_grade', label: 'Your final course grade (or projected, if not posted yet)', type: 'input', placeholder: 'e.g. C, 75%, in progress' },
       { id: 'a_biggest_change', label: 'What changed most in how you approach studying over these 8 weeks?', type: 'textarea', placeholder: 'Specific behaviors, not general feelings.' },
-      { id: 'a_keeping', label: 'What from this program are you keeping going forward?', type: 'textarea', placeholder: 'The weekly audit, team accountability, specific methods, the STAT cycle, a mindset shift...' },
+      { id: 'a_keeping', label: 'What from this program are you keeping going forward?', type: 'textarea', placeholder: 'The weekly audit, team accountability, specific methods, the CODE cycle, a mindset shift...' },
       { id: 'a_next_course', label: 'What\'s your next course or program?', type: 'input', placeholder: 'e.g. Microbiology, nursing school, pathophysiology' }
     ],
     hasTrack: true,
@@ -1333,12 +1333,12 @@ function renderTrackSection() {
   trackSection.innerHTML = `
     <div class="soap-section soap-section--track">
       <div class="soap-section__header">
-        <span class="soap-section__letter">T</span>
-        <h2 class="soap-section__title">Track</h2>
+        <span class="soap-section__letter">E</span>
+        <h2 class="soap-section__title">Evaluate</h2>
         <span class="soap-section__subtitle">Last week's commitments</span>
       </div>
       <p class="soap-section__intro">
-        Before we look at this week, we check what happened with last week's Action plan.
+        Before we look at this week, we check what happened with last week's decisions.
         Honest reporting. Scored for truthfulness, not performance.
       </p>
 
@@ -1363,10 +1363,10 @@ function renderTrackSection() {
       `).join('') : `
         <div class="callout callout--accent">
           <div class="callout__body">
-            <p class="callout__title">Your Week ${currentWeek - 1} Action plan commitments</p>
+            <p class="callout__title">Your Week ${currentWeek - 1} decisions</p>
             <p class="callout__text">
-              We couldn't find your saved Action plan from last week. If you wrote one, paste
-              your commitments below. If you didn't, that\'s itself useful data, just note that.
+              We could not find your saved decision plan from last week. If you wrote one, paste
+              your commitments below. If you did not, that is itself useful data, just note that.
             </p>
           </div>
         </div>
@@ -1468,7 +1468,7 @@ function submitAudit() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   // In production, this is where we'd POST to the data endpoint
-  // (Google Form, Formspree, etc.) — to be wired up later.
+  // (Google Form, Formspree, etc.), to be wired up later.
 }
 
 function downloadAudit() {
