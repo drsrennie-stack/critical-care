@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MedMasters Critical Care | Grade Audit Calculator</title>
+<title>STAT Success Cohort | Grade Audit Calculator</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -774,7 +774,7 @@ h1 {
 <div class="shell" id="main">
 
   <header class="masthead">
-    <div class="eyebrow">MedMasters Critical Care · Triage Tool</div>
+    <div class="eyebrow">STAT Success Cohort · Triage Tool</div>
     <h1>Grade Audit</h1>
     <p class="lead">
       Where you actually stand, in numbers. A&amp;P courses are usually graded by category
@@ -923,17 +923,17 @@ h1 {
       <div class="scenario-output__grid">
         <div>
           <div class="scenario-stat__label">Final grade</div>
-          <div class="scenario-stat__value" id="scenarioFinalGrade">—</div>
+          <div class="scenario-stat__value" id="scenarioFinalGrade">, </div>
           <div class="scenario-stat__sub" id="scenarioOutcome">Enter predicted scores above</div>
         </div>
         <div>
           <div class="scenario-stat__label">Change from current</div>
-          <div class="scenario-stat__value" id="scenarioChange">—</div>
+          <div class="scenario-stat__value" id="scenarioChange">, </div>
           <div class="scenario-stat__sub" id="scenarioDirection">vs. current grade</div>
         </div>
         <div>
           <div class="scenario-stat__label">Cushion above passing</div>
-          <div class="scenario-stat__value" id="scenarioCushion">—</div>
+          <div class="scenario-stat__value" id="scenarioCushion">, </div>
           <div class="scenario-stat__sub">Passing target</div>
         </div>
       </div>
@@ -1138,7 +1138,7 @@ function renderCategoryHtml(cat) {
           </div>
           <div class="category__summary-item">
             <span class="category__summary-label">Weight each</span>
-            <span class="category__summary-value">${weightPerAssessment !== null ? formatPercent(weightPerAssessment, 2) : '—'}</span>
+            <span class="category__summary-value">${weightPerAssessment !== null ? formatPercent(weightPerAssessment, 2) : ', '}</span>
           </div>
           ${avgCompleted !== null ? `
             <div class="category__summary-item">
@@ -1205,7 +1205,7 @@ function renderAssessmentHtml(a) {
       <input type="number" class="input input--sm"
              value="${a.score ?? ''}"
              data-field="score"
-             placeholder="—" min="0" max="150" step="0.1"
+             placeholder=", " min="0" max="150" step="0.1"
              aria-label="Score as percent">
       <span class="assessment-row__status">
         ${scored ? `<label style="font-size: 0.8125rem; font-weight: 400; color: var(--cc-text-muted); display: inline-flex; align-items: center; gap: 6px;">
@@ -1466,7 +1466,7 @@ function renderResults(earned, completedWeight, remainingWeight) {
         <div class="callout callout--warning">
           <div class="callout__body">
             <p class="callout__title">Passing requires strong performance ahead</p>
-            <p class="callout__text">You need to average ${formatPercent(passingRequired)} on remaining work just to pass. This is doable, but it is a real recovery situation. This is exactly what Critical Care is designed for.</p>
+            <p class="callout__text">You need to average ${formatPercent(passingRequired)} on remaining work just to pass. This is doable, but it is a real recovery situation. This is exactly what The program is designed for.</p>
           </div>
         </div>
       `;
@@ -1500,11 +1500,11 @@ function renderScenario(earned, completedWeight, remainingWeight, predictedContr
   const cushionEl = document.getElementById('scenarioCushion');
 
   if (predictedWeight <= 0) {
-    finalGradeEl.textContent = '—';
+    finalGradeEl.textContent = ', ';
     outcomeEl.textContent = 'Check "predicted" on scored remaining assessments';
-    changeEl.textContent = '—';
+    changeEl.textContent = ', ';
     directionEl.textContent = 'vs. current grade';
-    cushionEl.textContent = '—';
+    cushionEl.textContent = ', ';
     return;
   }
 
@@ -1514,7 +1514,7 @@ function renderScenario(earned, completedWeight, remainingWeight, predictedContr
   const finalContribution = earned + predictedContribution + unpredictedContribution;
   const finalGrade = totalWeight > 0 ? (finalContribution / totalWeight) * 100 : null;
 
-  if (finalGrade === null) { finalGradeEl.textContent = '—'; return; }
+  if (finalGrade === null) { finalGradeEl.textContent = ', '; return; }
 
   finalGradeEl.textContent = formatPercent(finalGrade);
 
@@ -1537,7 +1537,7 @@ function renderScenario(earned, completedWeight, remainingWeight, predictedContr
     changeEl.textContent = (change >= 0 ? '+' : '') + formatPercent(change);
     directionEl.textContent = change > 0 ? 'Improvement' : change < 0 ? 'Drop' : 'No change';
   } else {
-    changeEl.textContent = '—';
+    changeEl.textContent = ', ';
     directionEl.textContent = 'Need completed work';
   }
 
@@ -1545,12 +1545,12 @@ function renderScenario(earned, completedWeight, remainingWeight, predictedContr
     const cushion = finalGrade - passingValue;
     cushionEl.textContent = (cushion >= 0 ? '+' : '') + formatPercent(cushion);
   } else {
-    cushionEl.textContent = '—';
+    cushionEl.textContent = ', ';
   }
 }
 
 function formatPercent(num, decimals = 1) {
-  if (num === null || num === undefined || isNaN(num)) return '—';
+  if (num === null || num === undefined || isNaN(num)) return ', ';
   return num.toFixed(decimals) + '%';
 }
 
