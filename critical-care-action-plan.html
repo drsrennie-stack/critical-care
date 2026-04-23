@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MedMasters Critical Care | Action Plan</title>
+<title>STAT Success Cohort | Action Plan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -696,8 +696,8 @@ body {
   <!-- WEEK PICKER -->
   <div id="weekPicker" style="display: none;">
     <header style="margin-bottom: var(--cc-space-6);">
-      <div class="eyebrow">MedMasters Critical Care</div>
-      <h1 style="font-size: var(--cc-size-3xl); font-weight: var(--cc-weight-extra); color: var(--cc-navy); line-height: var(--cc-leading-tight); letter-spacing: -0.02em; margin-bottom: var(--cc-space-4);">Action Plan</h1>
+      <div class="eyebrow">STAT Success Cohort</div>
+      <h1 style="font-size: var(--cc-size-3xl); font-weight: var(--cc-weight-extra); color: var(--cc-navy); line-height: var(--cc-leading-tight); letter-spacing: -0.02em; margin-bottom: var(--cc-space-4);">Decision Plan</h1>
       <p style="font-size: var(--cc-size-md); color: var(--cc-text-secondary); line-height: var(--cc-leading-relaxed); max-width: 62ch;">
         Written after the live session, this is where the team's case reasoning becomes
         your own plan for the week. Which week are you on?
@@ -715,8 +715,8 @@ body {
   <!-- MAIN FORM -->
   <div id="actionForm" style="display: none;">
     <header class="masthead">
-      <div class="eyebrow" id="weekLabel">Action Plan</div>
-      <h1 id="weekTitle">Your Action Plan</h1>
+      <div class="eyebrow" id="weekLabel">STAT Success Cohort · Decision Plan</div>
+      <h1 id="weekTitle">Your Decision Plan</h1>
       <div class="masthead__theme" id="weekTheme"></div>
       <p class="masthead__lead" id="weekIntro"></p>
     </header>
@@ -727,7 +727,7 @@ body {
         <p class="callout__text">
           Take 10 to 15 minutes right after your live session while the case discussion
           is still fresh. Short, specific, realistic. Your commitments this week become
-          next week's Track section. What you promise here is what we check.
+          next week's Evaluate section. What you promise here is what we check.
         </p>
       </div>
     </div>
@@ -736,7 +736,7 @@ body {
     <div class="section">
       <div class="section__header">
         <span class="section__number">01</span>
-        <h2 class="section__title">From Triage to Action</h2>
+        <h2 class="section__title">From Observe to Decide</h2>
         <span class="section__subtitle">Synthesis</span>
       </div>
       <p class="section__intro" id="synthesisIntro"></p>
@@ -748,7 +748,7 @@ body {
 
       <div class="field">
         <label for="synthesis_self_recognition" class="label">Where in today's case did you recognize yourself?</label>
-        <textarea id="synthesis_self_recognition" name="synthesis_self_recognition" class="textarea textarea--sm" data-field="synthesis_self_recognition" placeholder="Be specific. Not "all of it" — what moment, what choice, what mistake?"></textarea>
+        <textarea id="synthesis_self_recognition" name="synthesis_self_recognition" class="textarea textarea--sm" data-field="synthesis_self_recognition" placeholder="Be specific. Not "all of it", what moment, what choice, what mistake?"></textarea>
       </div>
     </div>
 
@@ -885,7 +885,7 @@ body {
       <div class="confirmation__eyebrow">Plan committed</div>
       <h2 class="confirmation__title">Now go do the 24-hour action.</h2>
       <p class="confirmation__body">
-        Your Action plan is saved. Next week's Status audit will open with these commitments
+        Your decision plan is saved. Next week's Current State audit will open with these commitments
         and ask whether you executed. That's the loop. Show up there with honest answers,
         regardless of how the week goes.
       </p>
@@ -937,59 +937,59 @@ body {
 
 const WEEKS = {
   1: {
-    theme: 'Triage and team formation',
-    eyebrow: 'Week 1 Action Plan',
-    title: 'Your Action Plan for Week 1',
-    intro: 'Week 1 is different. There\'s no case yet, and the team is just forming. Your Action plan this week is about getting started well.',
-    synthesisIntro: 'Week 1 focuses on individual triage, not a team case. Use this space to capture what you realized about yourself during the session.'
+    theme: 'Stabilization and team formation',
+    eyebrow: 'Week 1 Decision Plan',
+    title: 'Your Decision Plan for Week 1',
+    intro: 'Week 1 is different. There is no case yet, and the team is just forming. Your decision plan this week is about getting started well.',
+    synthesisIntro: 'Week 1 focuses on individual stabilization, not a team case. Use this space to capture what you realized about yourself during the session.'
   },
   2: {
     theme: 'Stop the bleeding',
-    eyebrow: 'Week 2 Action Plan',
-    title: 'Your Action Plan for Week 2',
+    eyebrow: 'Week 2 Decision Plan',
+    title: 'Your Decision Plan for Week 2',
     intro: 'Morgan\'s case surfaced how method failure works. Now apply what the team reasoned through to your own situation.',
     synthesisIntro: 'You and your team worked Morgan\'s case. Most students in recovery make at least one of Morgan\'s moves. The work now is identifying which ones are yours and naming them.'
   },
   3: {
     theme: 'Foundation repair, selective',
-    eyebrow: 'Week 3 Action Plan',
-    title: 'Your Action Plan for Week 3',
-    intro: 'Jordan\'s case showed that good methods on broken foundations don\'t work. Your Action this week probably includes selective foundation repair.',
+    eyebrow: 'Week 3 Decision Plan',
+    title: 'Your Decision Plan for Week 3',
+    intro: 'Jordan\'s case showed that good methods on broken foundations do not work. Your decisions this week probably include selective foundation repair.',
     synthesisIntro: 'Jordan was doing almost everything right and still struggling. The case surfaced how foundation gaps compound. Use this space to name your own load-bearing gaps.'
   },
   4: {
     theme: 'The midterm hinge',
-    eyebrow: 'Week 4 Action Plan',
-    title: 'Your Action Plan for Week 4',
-    intro: 'This is the hinge. Your Action this week is about exam strategy recovery, not just content. What went wrong on your last exam, and what changes for the next one.',
+    eyebrow: 'Week 4 Decision Plan',
+    title: 'Your Decision Plan for Week 4',
+    intro: 'This is the hinge. Your decisions this week are about exam strategy recovery, not just content. What went wrong on your last exam, and what changes for the next one.',
     synthesisIntro: 'This week\'s case focused on exam strategy failure. Apply what you learned to your own exam performance: what went wrong, what changes for next time.'
   },
   5: {
     theme: 'Point recovery',
-    eyebrow: 'Week 5 Action Plan',
-    title: 'Your Action Plan for Week 5',
-    intro: 'Point recovery is external work as much as internal work. This week\'s Action almost certainly involves a conversation or two you\'ve been avoiding.',
+    eyebrow: 'Week 5 Decision Plan',
+    title: 'Your Decision Plan for Week 5',
+    intro: 'Point recovery is external work as much as internal work. This week\'s decisions almost certainly involve a conversation or two you have been avoiding.',
     synthesisIntro: 'The case this week surfaced the mechanics of point recovery: extra credit, resubmissions, conversations with instructors, institutional mechanisms. Apply what you learned to your course.'
   },
   6: {
     theme: 'Consolidation and integration',
-    eyebrow: 'Week 6 Action Plan',
-    title: 'Your Action Plan for Week 6',
+    eyebrow: 'Week 6 Decision Plan',
+    title: 'Your Decision Plan for Week 6',
     intro: 'The work shifts this week from fixing to integrating. Your commitments probably involve cross-system reasoning practice and teach-backs.',
-    synthesisIntro: 'The case this week examined what happens when students can name parts but can\'t connect them. Your Action is about building the connections, one pair of systems at a time.'
+    synthesisIntro: 'The case this week examined what happens when students can name parts but cannot connect them. Your decisions this week are about building the connections, one pair of systems at a time.'
   },
   7: {
     theme: 'Final exam runway',
-    eyebrow: 'Week 7 Action Plan',
-    title: 'Your Action Plan for Week 7',
-    intro: 'Your final is imminent. This week\'s Action plan is shorter than usual because the execution matters more than the plan. Small, specific, time-bound.',
+    eyebrow: 'Week 7 Decision Plan',
+    title: 'Your Decision Plan for Week 7',
+    intro: 'Your final is imminent. This week\'s decision plan is shorter than usual because the execution matters more than the plan. Small, specific, time-bound.',
     synthesisIntro: 'The case this week looked at the difference between effective and ineffective final exam preparation. Your plan this week lives or dies on specificity and realism.'
   },
   8: {
     theme: 'Definitive care',
-    eyebrow: 'Week 8 Action Plan',
-    title: 'Your Action Plan for Week 8',
-    intro: 'This is the last Action plan of the program. The 24-hour action is executing your final exam (or the work that remains). The 7-day plan is about closing out, and what you\'re keeping going forward.',
+    eyebrow: 'Week 8 Decision Plan',
+    title: 'Your Decision Plan for Week 8',
+    intro: 'This is the last decision plan of the program. The 24-hour action is executing your final exam, or the work that remains. The 7-day plan is about closing out, and what you are keeping going forward.',
     synthesisIntro: 'No case this week. This space is for you to synthesize what 7 weeks of recovery work produced. Concrete changes, specific wins, what you carry forward.'
   }
 };
@@ -1072,7 +1072,7 @@ function saveState() {
 
     const payload = {
       data,
-      commitments,  // Stored as simple array for Status audit to read
+      commitments, // Stored as simple array for Status audit to read
       savedAt: new Date().toISOString(),
       week: currentWeek
     };
@@ -1189,7 +1189,7 @@ function renderConfirmation(data, commitments) {
   const confirm24Text = document.getElementById('confirm24Text');
 
   if (action24) {
-    confirm24Text.textContent = action24 + (when24 ? ' — ' + when24 : '');
+    confirm24Text.textContent = action24 + (when24 ? ', ' + when24 : '');
   } else {
     confirm24Text.textContent = 'No 24-hour action entered. Go back and add one before you close this tab.';
   }
